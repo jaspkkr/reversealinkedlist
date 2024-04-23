@@ -47,7 +47,7 @@ public class Main {
         MyNode start = list;
         MyNode finalList =  null;
 
-        while (start.getNext() != null){
+        while (start != null){
             if (finalList ==null)
                 finalList = new MyNode(start.getId(), null);
             else
@@ -56,12 +56,7 @@ public class Main {
             start = start.getNext();
         }
 
-        //last node will never be processed by above loop
-        // because it's node element is null so loop makes an exit before processing last node
-        // so we need this line as a workaround.
-        start.setNode(finalList);
-
-        return start;
+        return finalList;
     }
 
 
@@ -76,7 +71,10 @@ public class Main {
         }
 
         //I don't recall completly if original printList method had code to print last node, but I never saw 3 getting printed
-        //so if not, we need to add an extra line here to print last node for the same reason
-        //as described at line 59.
+        //so if not, we need to add an extra line here to print last node because
+        //last node will never be processed by above loop because it's node element is null so loop makes an exit before processing node data
+        // so we need this line as a workaround.
+        System.out.println(start.getId());
+
     }
 }
