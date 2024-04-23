@@ -77,6 +77,6 @@ public class Main {
 
         //I don't recall completly if original printList method had code to print last node, but I never saw 3 getting printed
         //so if not, we need to add an extra line here to print last node for the same reason
-        //as described at line 68.
+        //as described at line 59.
     }
 }
